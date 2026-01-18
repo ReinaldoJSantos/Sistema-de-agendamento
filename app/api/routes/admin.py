@@ -9,6 +9,6 @@ router = APIRouter(
 )
 
 
-@router.get("dashboard")
+@router.get("/dashboard")
 def dashboard():
     return {"msg": "Acessdo admin autorizado"}
