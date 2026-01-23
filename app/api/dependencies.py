@@ -60,4 +60,4 @@ def require_admin(current_user: User = Depends(get_current_user)):
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Acesso restrito a administradores",
         )
-        return current_user
+    return current_user

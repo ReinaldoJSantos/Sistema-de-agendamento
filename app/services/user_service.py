@@ -19,7 +19,7 @@ class UserService:
             raise ValueError("Usuário já existe")
 
         hashed = get_password_hash(password)
-        return self.repo.create(email, hashed, role="client")
+        return self.repo.create(email, hashed, role="cliente")
 
     def login(self, email: str, password: str):
         user = self.repo.get_by_email(email)
