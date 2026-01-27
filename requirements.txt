@@ -14,7 +14,7 @@ idna==3.11
 iniconfig==2.3.0
 packaging==25.0
 pluggy==1.6.0
-psycopg2-binary==2.9.11
+psycopg[binary]
 pydantic==2.12.5
 pydantic_core==2.41.5
 Pygments==2.19.2
@@ -30,3 +30,8 @@ uvicorn==0.40.0
 uvloop==0.22.1
 watchfiles==1.1.1
 websockets==15.0.1
+email-validator==2.3.0
+pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
