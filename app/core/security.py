@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta
 from jose import jwt
 from passlib.context import CryptContext
-from app.core.config import BaseSettings
 
 SECRET_KEY = "super-secret-key"
 ALGORITHM = "HS256"

@@ -1,4 +1,4 @@
-from pytest import Session
+from sqlalchemy.orm import Session
 from app.models.user import User
 from app.repositories.user_repository import UserRepository
 from app.core.security import (
