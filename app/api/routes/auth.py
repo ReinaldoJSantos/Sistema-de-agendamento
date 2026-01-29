@@ -25,11 +25,14 @@ def login(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
-    token = authenticate_user(db, form_data.username, form_data.password)
+    token = authenticate_user(
+        db,
+        email=form_data.username, password=form_data.password)
 
     if not token:
         raise HTTPException(status_code=401, detail="Credenciais invalidas")
 
     return {
-        "access_token": token
+        "access_token": token,
+        "toke_type": "bearer"
         }
