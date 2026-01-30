@@ -2,7 +2,7 @@ def test_admin_dashboard(client):
     login = client.post(
         "/auth/login",
         data={
-            "username": "admin@admin.com",
+            "username": "admin@agendamento.com",
             "password": "admin123"
         },
     )
