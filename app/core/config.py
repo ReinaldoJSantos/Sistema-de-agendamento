@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
 
 
 class Settings(BaseSettings):
@@ -7,6 +8,7 @@ class Settings(BaseSettings):
     POSTGRES_DB: str
     POSTGRES_HOST: str = "db"
     POSTGRES_PORT: int = 5432
+
     ADMIN_EMAIL: str = "admin@agendamento.com"
     ADMIN_PASSWORD: str = "admin123"
 
@@ -20,9 +22,8 @@ class Settings(BaseSettings):
             f"{self.POSTGRES_DB}"
         )
 
-    class Config:
-        env_file = ".env"
-        extra = "ignore"  # Importante para evitar erros de sobra variavel
+    model_config = ConfigDict(env_file=".env", env_file_encoding="utf-8")
+    # Importante para evitar erros de sobra variavel
 
 
 settings = Settings()
