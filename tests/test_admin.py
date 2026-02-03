@@ -17,3 +17,12 @@ def test_admin_dashboard(client):
     )
 
     assert response.status_code == 200
+
+
+def test_admin_dashboard_access_as_admin(client, admin_token):
+    response = client.get(
+        "/admin/dashboard",
+        headers={"Authorization": f"Bearer {admin_token}"}
+    )
+
+    assert response.status_code == 200

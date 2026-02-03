@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from pytest import Session
-from app.api.dependencies import get_current_user, get_db, require_admin
+from app.core.deps import get_current_user, get_db, require_admin
 from app.models.user import User
 from app.schemas.user import UserCreate
 from app.services.user_service import UserService

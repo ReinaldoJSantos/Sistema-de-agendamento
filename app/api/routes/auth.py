@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.schemas.auth import TokenResponse
 from app.services.auth_service import authenticate_user
-from app.api.dependencies import get_db
+from app.core.deps import get_db
 from app.repositories.user_repository import UserRepository
 from app.services.user_service import UserService
 
